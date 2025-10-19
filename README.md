@@ -13,14 +13,14 @@ I'm František, a PhD candidate in Psychology at the University of Amsterdam and
 
 - **[RoBMA](https://cran.r-project.org/package=RoBMA)** - Robust Bayesian Meta-Analysis - An R package for highly customizable Bayesian model-averaged meta-analytic models
 - **[zcurve](https://cran.r-project.org/package=zcurve)** - Z-Curve - An R package for estimating replication rates from test statistics
-- **Meta-Analysis module for JASP** - Making meta-analysis accessible to everyone via JASP
+- **[Meta-Analysis module for JASP](https://github.com/jasp-stats/jaspMetaAnalysis)** - Making meta-analysis accessible to everyone via JASP
 
 ## Connect with me
 
 - 🌐 [Website](https://frantisek-bartos.info/)
-- 📧 f.bartos96@gmail.com
+- 📧 email@frantisek-bartos.info
 - 💼 [LinkedIn](https://linkedin.com/in/franti%C5%A1ek-barto%C5%A1-50249b192/)
 
 ---
 
-*For a complete overview of my research and experience, check out my [full CV](https://frantisek-bartos.info/cv.pdf).*
+*For a complete overview of my research and experience, check out my [full CV](https://github.com/FBartos/FBartos/blob/main/CV.pdf).*
