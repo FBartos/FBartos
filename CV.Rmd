@@ -1,0 +1,325 @@
+---
+name: 
+surname: František Bartoš
+date: "`r format(Sys.time(), '%B, %Y')`"
+position: "PhD Candidate in Psychology, CFO of JASP Services"
+address: "Amsterdam, Netherlands"
+email: "f.bartos96@gmail.com"
+www: "frantisek-bartos.info/"
+github: "FBartos"
+linkedin: "franti%C5%A1ek-barto%C5%A1-50249b192/"
+headcolor: "414141"
+csl: apa.csl
+output: 
+  vitae::awesomecv:
+    keep_tex: true
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(vitae)
+source("_functions.R")
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+# About
+
+\begin{cvparagraph}
+I am a Psychological Methods PhD candidate at the University of Amsterdam and cofounder \& CFO of JASP Services. My goal is to improve statistical procedures and enable researchers to draw better inferences from data. I am interested in Bayesian statistics, meta-analyses, publication bias, and replicability. I also flipped some coins a couple of times.
+\end{cvparagraph}
+
+# Education
+
+```{r education}
+tribble(
+  ~ degree, ~ uni, ~ loc, ~ dates, ~ details,
+  "PhD Candidate in Psychology", "University of Amsterdam", "Amsterdam, Netherlands", "2021 - Present", 
+    list("Research focus on Bayesian hypothesis testing, Bayesian model-averaging, meta-analyses, and publication bias adjustment.",
+         "Developing novel statistical methods for meta-analytic inference in the presence of publication bias.",
+         "Creating open-source software packages and contributing to the development of JASP."),
+  "Research Master's in Psychology", "University of Amsterdam", "Amsterdam, Netherlands", "2019 - 2021", 
+    list("Thesis published as F Bartoš, F Aust, JM Haaf (2022). Informed Bayesian survival analysis. BMC Medical Research Methodology, 22(1), 1-22.",
+         "Internship published as F Bartoš, M Maier, D Quintana, EJ Wagenmakers (2022). Adjusting for publication bias in JASP and R: Selection models, PET-PEESE, and robust Bayesian meta-analysis. Advances in Methods and Practices in Psychological Science, 5(3), 1-19."),
+  "Bachelor's Degree in Psychology", "Faculty of Arts, Charles University", "Prague, Czech Republic", "2016 - 2019", 
+    list("Thesis Faktory asociovane s podvadenim (Factors associated with dishonesty) partially published as: F Bartoš (2024). The untrustworthy evidence in dishonesty research. Meta-Psychology, 8, 1-7.")
+) %>% 
+  detailed_entries(degree, dates, uni, loc, details)
+```
+
+# Experience
+
+```{r experience}
+tribble(
+  ~ role, ~ company, ~ loc, ~ dates, ~ details,
+  "Co-founder & Chief Financial Officer", "JASP Services", "Amsterdam, Netherlands", "2025 - Present",
+    list("Co-founded commercial entity to support JASP statistical software development and sustainability.",
+         "Managing financial operations and business strategy."),
+  "Research Scientist", "Faculty of Social Sciences, Charles University", "Prague, Czech Republic", "2024 - 2025",
+    list("Development of publication bias adjustment methodology for meta-analyses in economics."),
+  "PhD Fellow", "Institute of Computer Science, Czech Academy of Sciences", "Prague, Czech Republic", "2022 - Present",
+    list("Collaborating on research focused on inter-rater reliability.",
+         "Developing statistical methods for assessing agreement and reliability in behavioral coding.",
+         "Contributing to methodological advances in psychometrics."),
+  "Research Assistant", "JASP Development Team", "Amsterdam, Netherlands", "2019 - 2021",
+    list("R developer for JASP Development Team.",
+         "Implemented Learn Bayes and Mixed Effects modules.",
+         "Developed publication bias correction methods for the Meta-Analysis module."),
+  "Research Assistant", "Center for Educational Measurement and Psychometrics, Charles University", "Prague, Czech Republic", "2018 - 2022",
+    list("Collaborated with the Institute of Computer Science on project 'Testing heterogeneity in inter-rater reliability'.",
+         "Developed Bayesian methodology for assessing heterogeneity in inter-rater reliability."),
+  "Research Assistant", "Prague Laboratory for Experimental Social Sciences", "Prague, Czech Republic", "2017 - 2021",
+    list("Created ShinyApp for data visualization and interactive analysis.",
+         "Analyzed data and collaborated on moral psychology research.",
+         "Contributed to experimental design and statistical analysis of behavioral studies."),
+  "Research Assistant", "Faculty of Arts, Charles University", "Prague, Czech Republic", "2017 - 2020",
+    list("Cleaned, prepared, and analyzed data from the Vysočina Cohort study.",
+         "Conducted systematic reviews and meta-analyses.",
+         "Contributed to longitudinal research on developmental psychology."),
+  "Research Assistant", "Institute of Psychology, Czech Academy of Sciences", "Prague, Czech Republic", "2017 - 2019",
+    list("Developed a similarity measure for photographs using convolutional neural networks.",
+         "Implemented Python code for grid computing and conducted data analysis in R.",
+         "Created norms for a Czech lexical test through data cleaning and statistical analysis.")
+) %>% 
+  detailed_entries(role, dates, company, loc, details)
+```
+
+# Publications
+
+## Meta-Analysis & Publication Bias Methods
+
+```{r publications-meta, results='asis'}
+print_publications("publications-meta_analysis.bib")
+```
+
+## Statistical Methods & Theory
+
+```{r publications-statistics, results='asis'}
+print_publications("publications-statistics.bib")
+```
+
+## Empirical Research & Meta-Science
+
+```{r publications-empirical, results='asis'}
+print_publications("publications-empirical.bib")
+```
+
+## Other Publications
+
+```{r publications-other, results='asis'}
+print_publications("publications-all.bib")
+```
+
+## Other Preprints
+
+```{r publications-preprints, results='asis'}
+print_publications("publications-preprints.bib")
+```
+
+# Software
+
+\begin{cvparagraph}
+My research output includes the development of open-source R packages for statistical analysis. These packages enable scientific practitioners to apply the developed methodology in practice.
+\end{cvparagraph}
+
+```{r software, results='asis'}
+software_packages <- tribble(
+  ~ name, ~ url, ~ description,
+  "RoBMA",      "https://cran.r-project.org/package=RoBMA",      "Robust Bayesian Meta-Analysis",
+  "zcurve",     "https://cran.r-project.org/package=zcurve",     "Z-Curve 2.0: Estimating Replication Rates and Discovery Rates",
+  "BayesTools", "https://cran.r-project.org/package=BayesTools", "Tools for Bayesian Analyses",
+  "IRR2FPR",    "https://cran.r-project.org/package=IRR2FPR",    "IRR2FPR: Computing False Positive Rate from Inter-Rater Reliability",
+  "RoBSA",      "https://cran.r-project.org/package=RoBSA",      "Robust Bayesian Survival Analysis",
+  "RoBTT",      "https://cran.r-project.org/package=RoBTT",      "Robust Bayesian T-Test",
+  "Meta-Analysis (JASP)",  "https://github.com/jasp-stats/jaspMetaAnalysis/", "Meta-Analysis Module for JASP",
+  "Mixed Models (JASP)",   "https://github.com/jasp-stats/jaspSurvival/", "Survival Module for JASP",
+  "Survival (JASP)",       "https://github.com/jasp-stats/jaspMixedModels/", "Mixed Models Module for JASP",
+  "Learn Bayes (JASP)",    "https://github.com/jasp-stats/jaspLearnBayes", "Learn Bayes Module for JASP"
+)
+
+print_software(software_packages)
+```
+
+# Teaching
+
+```{r teaching, results='asis'}
+teaching_data <- tribble(
+  ~ title, ~ code, ~ campus, ~ semester, ~ role,
+  "Meta-Analysis", "Graduate Course", "University of Amsterdam", "2022-2025", "Instructor/Course Coordinator",
+  "Bayesian Inference for Psychology", "Graduate Course", "University of Amsterdam", "2021-2026", "Assistant",
+  "Good Research Practices", "Graduate Course", "University of Amsterdam", "2021-2022", "Assistant",
+  "Statistická analýza dat (Statistical analysis of data)", "Graduate Course", "Faculty of Arts, Charles University", "2019-2020", "Teaching Assistant",
+  "New Statistics and Other Actual Trends in Applied Data Analysis", "Graduate Course", "Faculty of Arts, Charles University", "2019-2020", "Teaching Assistant",
+  "Introduction to Bayesian data analysis", "Guest Lecture", "Faculty of Arts, Charles University", "2018", "Lecturer",
+  "Výzkumný seminář v experimentální sociální psychologii (Research Seminar in Experimental Social Psychology)", "Undergraduate Course", "Faculty of Arts, Charles University", "2018-2019", "Teaching Assistant"
+)
+
+print_teaching(teaching_data)
+```
+
+# Supervision
+
+```{r supervision, results='asis'}
+supervision_data <- tribble(
+  ~ year, ~ type, ~ title, ~ description, ~ campus,
+  "2024-2025", "Bachelor's Thesis", "A Stefanów, M Serry, O Piestrak, E Koskinen, W Brenner", "When are Bayesians going to take over the world? Literature review of Bayesian statistics in psychological research", "University of Amsterdam",
+  "2022-2023", "Bachelor's Thesis", "A Sahrani, D Klein Leunk, PY Gui, D Voss, K Ullah", "How fair is a fair coin flip (published as Fair coins tend to land on the same side they started: Evidence from 350,757 flips)", "University of Amsterdam"
+)
+
+print_supervision(supervision_data)
+```
+
+# Talks \& Workshops
+
+## Invited
+
+```{r talks, results='asis'}
+talks_data <- tribble(
+  ~ when, ~ title, ~ details, ~ where,
+  "2025", "Bayesian hypothesis testing: Concepts, benefits, and practical implementation", "Seminar in Advanced Research Methods", "Department of Psychology, Princeton \\href{https://princeton.zoom.us/rec/share/Sfeuxq_gcHWQH7wktYydjZytlNvQTx7yrRVjl0fcf8sCG7251CQDAI7QJX2j5K0Z.ajG6QNxxHiSgkWWu}{[recording]}",
+  "2025", "Bayesian methods workshop", "Statistics \\& Methodology Platform", "Swiss Clinical Trial Organisation (SCTO), Bern",
+  "2025", "Ig Nobel night", "", "Nemo, Amsterdam",
+  "2025", "Ig Nobel night", "", "EPFL, Lausanne",
+  "2024", "Analyzing data with JASP: A free, open-source, and user-friendly statistical software", "Methods for Evidence Synthesis Salon", "University of Bristol; remote",
+  "2023", "Analyzing data with JASP: A free, open-source, and user-friendly statistical software", "", "Department of Statistics, Texas A\\&M College Station",
+  "2023", "Accounting for publication bias with robust Bayesian meta-analysis", "Statistical and Machine Learning Approaches for the Social Sciences", "University of Washington; remote",
+  "2022", "Informed Bayesian (model-averaged) survival analysis", "", "International Society For Clinical Biostatistics: ČR; remote",
+  "2022", "Robust Bayesian meta-analysis", "", "University of Groningen; remote",
+  "2021", "Bayesian meta-analysis with JASP", "", "DE-PASS; remote"
+)
+
+print_talks(talks_data)
+```
+
+## Talks 
+
+```{r conference-talks, results='asis'}
+conference_talks_data <- tribble(
+  ~ year, ~ title, ~ conference, ~ place,
+  "2025", "Fast and efficient robust Bayesian meta-analysis with spike-and-slab priors", "International Meeting of Psychometric Society", "Minneapolis",
+  "2025", "Fast and efficient robust Bayesian meta-analysis with spike-and-slab priors", "Society for Research Synthesis Methodology", "Madison",
+  "2024", "Meta-analysis with JASP", "Society for Research Synthesis Methodology", "Amsterdam",
+  "2024", "Bayesian model-averaged analysis of 350,757 coin flips", "Joint Statistical Meeting", "Portland",
+  "2023", "Exploring open science practices in behavioural public policy research", "MAER-NET", "Palma de Mallorca",
+  "2023", "Bayesian location-scale model for assessing reliability differences with ordinal ratings", "International Meeting of Psychometric Society", "Baltimore",
+  "2023", "Robust Bayesian meta-regression: Publication bias adjusted moderator analysis", "MathPsych/ICCM/EMPG", "Amsterdam",
+  "2023", "Adjusting for Risk of Bias in medical meta-analyses: A large-scale analysis of Cochrane Database of Systematic Reviews", "Society for Research Synthesis Methodology", "Paris",
+  "2022", "Tutorial on robust Bayesian meta-analysis in JASP and R", "MAER-NET", "Kyoto",
+  "2022", "Adjusting for publication bias with Bayesian model-averaging and the RoBMA R package", "ESMARConf", "Online",
+  "2021", "No need to choose: Robust Bayesian meta-analysis", "MAER-NET", "Piraeus",
+  "2021", "Extending RoBMA with PET-PEESE: Mitigating publication bias with Bayesian model averaging", "International Meeting of Psychometric Society", "Online",
+  "2021", "No need to choose: Extending robust Bayesian meta-analysis by model-averaging across different publication selection models", "Quantitative Analysis of Publication Bias", "Konstanz",
+  "2021", "Robust Bayesian meta-analysis: A framework for addressing publication bias with model-averaging", "Seminar in psychometrics", "Prague",
+  "2019", "A minority deliberately cheats for one's own and other's benefit: An investigation of dicehonesty using mouse tracking", "Prague Conference on Behavioral Sciences", "Prague",
+  "2019", "Jak měřit podobnost fotografií pomocí neuronových sítí?", "Kognitivní škola", "Malá Skála",
+  "2018", "Recognition of abilities in random noise: People are willing to pay for the illusion of success", "Prague Conference on Behavioral Sciences", "Prague"
+)
+
+print_conference_talks(conference_talks_data)
+```
+
+## Workshops 
+
+```{r workshops-talks, results='asis'}
+workshops_data <- tribble(
+  ~ year, ~ title, ~ place,
+  "2025", "State-of-the-art meta-analysis using JASP", "Amsterdam",
+)
+
+print_workshops(workshops_data)
+```
+
+# Funding, Awards \& Scholarships
+
+## Funding
+
+```{r funding, results='asis'}
+funding_data <- tribble(
+  ~ year, ~ type, ~ title, ~ amount, ~ coauthors, ~ agency,
+  "2024", "Valorisation Grant", "Enabling Meta-Analytic SEM via JASP", "9.955 EUR", "together with S Jak and M Cheung", "Social and Behavioural Data Science Centre, University of Amsterdam"
+)
+
+print_funding(funding_data)
+```
+
+## Awards
+
+```{r awards, results='asis'}
+awards_data <- tribble(
+  ~ award, ~ project, ~ from, ~ year,
+  "Student Travel Award",                        "",  "International Meeting of Psychometric Society", "2025",
+  "Ig Nobel Prize in Probability",               "For Fair coins tend to land on the same side they started: Evidence from 350,757 flips", "Ig Nobel Awards", "2024",
+  "OSCAwards for Transparency, Metascience, Preregistration, and Reproducibility", "For A 27-country test of communicating the scientific consensus on climate change, together with B Većkalov and SJ Geiger", "Open Science Community Amsterdam", "2024",
+  "Pineapple Science Award: Mathematics Award" , "For Fair coins tend to land on the same side they started: Evidence from 350,757 flips", "Pineapple Science Awards", "2023",
+  "Travel Award",                                "", "International Society for Bayesian Analysis", "2022"
+)
+
+print_awards(awards_data)
+```
+
+## Scholarships
+
+```{r scholarships, results='asis'}
+scholarships_data <- tribble(
+  ~ scholarship, ~ project, ~ from, ~ year,
+  "COST Action Virtual Mobility Grant",       "For Performing (Bayesian) meta-analysis with JASP", "COST Action CA19101", "2022",
+  "Doktorandská prémie ISCB ČR",              "For Informed Bayesian (model averaged) survival analysis", "International Society For Clinical Biostatistics: ČR", "2022",
+  "Student Scientific Scholarship",           "For project Rozvoj metody z-curve pro odhadováni důvěryhodnosti vědeckých studií (Development of z-curve for estimation of trustworthiness of research)", "Faculty of Arts, Charles University", "2019",
+  "Specific University Research Scholarship", "For project Porovnání metod pro odhad rozdílů ve shodách posuzovatelů (Comparison of methods for estimating differences in inter-rater reliability)", "Faculty of Arts, Charles University", "2019",
+  "Student Scientific Scholarship",           "For project Můžeme důvěřovat výzkumům o podvádění? (Can we trust research on lying)", "Faculty of Arts, Charles University", "2018",
+  "Scholarship of Special Consideration",     "For active participation at Society for Judgement and Decision making, New Orleans", "Faculty of Arts, Charles University", "2018",
+  "Scholarship of Special Consideration",     "For active participation at StanCon Helsinky", "Faculty of Arts, Charles University", "2018",
+  "Merit Scholarship",                        "", "Faculty of Arts, Charles University", "2017",
+  "Merit Scholarship",                        "", "Faculty of Arts, Charles University", "2016"
+)
+
+print_scholarships(scholarships_data)
+```
+
+# Service
+
+## Organization
+
+```{r service-entries, results='asis'}
+service_data <- tribble(
+  ~ year, ~ title, ~ description,
+  "2025", "Discovering Statistics using JASP", "Together with H Godmann, J van Doorn, and EJ Wagenmakers part of the organizing committee for the workshop. The hybrid workshop is scheduled to take place June 30, 2025.",
+  "2025", "State-of-the-Art Meta-Analysis using JASP", "Together with H Godmann and EJ Wagenmakers, part of the organizing committee for the workshop. The hybrid workshop is scheduled to take place July 1, 2025.",
+  "2025", "A Crash Course in Machine Learning with JASP", "Together with Henrik Godmann, D van den Bergh, K Derks, and EJ Wagenmakers, part of the organizing committee for the workshop. The hybrid workshop is scheduled to take place July 2, 2025.",
+  "2025", "11th Annual JASP Workshop: Theory and Practice of Bayesian Hypothesis Testing", "Together with H Godmann, R Morey, and EJ Wagenmakers, part of the organizing committee for the two-day workshop. The hybrid workshop is scheduled to take place July 3-4, 2025.",
+  "2025", "Journal of Robustness Reports", "Together with A Sarafoglou, B Aczel, S Hoogeveen, C Chambers, and EJ Wagenmakers, founded the diamond open access Journal of Robustness Reports (https://scipost.org/JRobustRep/about). Fellow of the Editorial College for the Journal of Robustness Reports, 2025-present.",
+  "2024", "10th Annual JASP Workshop: Theory and Practice of Bayesian Hypothesis Testing", "Together with H Godmann, R Morey, and EJ Wagenmakers part of the organizing committee for the two-day workshop. The hybrid workshop took place July 15-16, 2024, and attracted 47 participants.",
+  "2024", "12th Annual JAGS and Stan Workshop: Bayesian Modeling for Cognitive Science", "Together with H Godmann, M Lee, and EJ Wagenmakers, part of the organizing committee for the one-week workshop. The workshop took place July 8-12, 2024, in Amsterdam, the Netherlands, and attracted 20 participants.",
+  "2023", "9th Annual JASP Workshop: Theory and Practice of Bayesian Hypothesis Testing", "Together with F Aust, C Guazzone, Š Kucharský, J van Doorn, R Morey, and EJ Wagenmakers, part of the organizing committee for the two-day workshop. The hybrid workshop took place July 15-16, 2023, and attracted 55 participants.",
+  "2023", "11th Annual JAGS and Stan Workshop: Bayesian Modeling for Cognitive Science", "Together with F Aust, C Guazzone, M Villarreal, L Montgomery, Š Kucharský, D van den Bergh, J van Doorn, M Lee, and EJ Wagenmakers, part of the organizing committee for the one-week workshop. The workshop took place July 10-14, 2023, in Amsterdam, the Netherlands, and attracted 37 participants.",
+  "2022", "8th Annual JASP Workshop: Theory and Practice of Bayesian Hypothesis Testing", "Together with L Lengersdorff, F Aust, A Sarafoglou, J Petter, S Kucharský, A Stefan, D van den Bergh, R Morey, and Eric-Jan Wagenmakers, part of the organizing committee for the two-day workshop. The hybrid workshop took place August 29-30, 2022 and attracted 55 participants.",
+  "2022", "10th Annual JAGS and Stan Workshop: Bayesian Modeling for Cognitive Science", "Together with L Lengersdorff, F Aust, A Sarafoglou, M Villarreal, L Montgomery, J Petter, Š Kucharský, A Stefan, J van Doorn, M Lee, and EJ Wagenmakers, part of the organizing committee for the one-week workshop. The workshop took place August 22-26, 2022, in Amsterdam, the Netherlands, and attracted 25 participants."
+)
+
+print_service(service_data)
+```
+
+## Peer Review
+
+```{r peer-review, results='asis'}
+peer_review_data <- tribble(
+  ~ journal,
+  "Advances in Methods and Practices in Psychological Science",
+  "Atherosclerosis",
+  "Behavior Research Methods",
+  "BMC Medical Research Methodology",
+  "Collabra",
+  "Current Medical Research and Opinion",
+  "Energy Economics",
+  "Health Psychology",
+  "International Review of Sport and Exercise Psychology",
+  "Meta-Psychology",
+  "Nature Human Behaviour",
+  "Personality \\& Social Psychology Bulletin",
+  "PloS One",
+  "Psychological Methods",
+  "Research Synthesis Methods",
+  "Statistics in Medicine"
+)
+
+print_peer_review(peer_review_data)
+```
