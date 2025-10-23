@@ -11,6 +11,8 @@ I'm František, a PhD candidate in Psychology at the University of Amsterdam and
 
 ## Some things I've built
 
+- **[PublicationBiasBenchmark](https://github.com/FBartos/PublicationBiasBenchmark)** - Benchmark for publication bias correction methods - An R package with unified interface for benchmarking meta-analytic
+    publication bias correction methods through simulation studies
 - **[RoBMA](https://cran.r-project.org/package=RoBMA)** - Robust Bayesian Meta-Analysis - An R package for highly customizable Bayesian model-averaged meta-analytic models
 - **[zcurve](https://cran.r-project.org/package=zcurve)** - Z-Curve - An R package for estimating replication rates from test statistics
 - **[Meta-Analysis module for JASP](https://github.com/jasp-stats/jaspMetaAnalysis)** - Making meta-analysis accessible to everyone via JASP
