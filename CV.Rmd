@@ -124,7 +124,7 @@ My research output includes the development of open-source R packages for statis
 ```{r software, results='asis'}
 software_packages <- tribble(
   ~ name, ~ url, ~ description,
-  "PublicationBiasBenchmark",      "https://github.com/FBartos/PublicationBiasBenchmark",      "Benchmark for Publication Bias Correction Methods",
+  "PublicationBiasBenchmark",      "https://cran.r-project.org/package=PublicationBiasBenchmark",      "Benchmark for Publication Bias Correction Methods",
   "RoBMA",      "https://cran.r-project.org/package=RoBMA",      "Robust Bayesian Meta-Analysis",
   "zcurve",     "https://cran.r-project.org/package=zcurve",     "Z-Curve 2.0: Estimating Replication Rates and Discovery Rates",
   "BayesTools", "https://cran.r-project.org/package=BayesTools", "Tools for Bayesian Analyses",
