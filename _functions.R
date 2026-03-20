@@ -1,5 +1,11 @@
 # Helper functions for CV generation
 
+# Read a CSV and reverse row order (CSV is chronological, print is reverse-chronological)
+read_cv_csv <- function(file, ...) {
+  df <- readr::read_csv(file, show_col_types = FALSE, ...)
+  df[rev(seq_len(nrow(df))), ]
+}
+
 # Function to print publications from a bib file with links
 print_publications <- function(bib_file, font_size = "\\small") {
   library(bib2df)
@@ -156,7 +162,7 @@ print_talks <- function(talks_df, font_size = "\\small") {
     details <- talks_df$details[i]
     where <- talks_df$where[i]
     
-    details_where <- ifelse(details != "", paste0(details, "; ", where), where)
+    details_where <- ifelse(!is.na(details) && details != "", paste0(details, "; ", where), where)
     
     # Format: [YEAR] Title: Details; Where
     cat("\\item[", when, "] \\textbf{", title, "}: ", details_where, "\n", sep = "")

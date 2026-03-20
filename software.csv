@@ -1,0 +1,12 @@
+name,url,description
+"PublicationBiasBenchmark","https://cran.r-project.org/package=PublicationBiasBenchmark","Benchmark for Publication Bias Correction Methods"
+"RoBMA","https://cran.r-project.org/package=RoBMA","Robust Bayesian Meta-Analysis"
+"zcurve","https://cran.r-project.org/package=zcurve","Z-Curve 2.0: Estimating Replication Rates and Discovery Rates"
+"BayesTools","https://cran.r-project.org/package=BayesTools","Tools for Bayesian Analyses"
+"IRR2FPR","https://cran.r-project.org/package=IRR2FPR","IRR2FPR: Computing False Positive Rate from Inter-Rater Reliability"
+"RoBSA","https://cran.r-project.org/package=RoBSA","Robust Bayesian Survival Analysis"
+"RoBTT","https://cran.r-project.org/package=RoBTT","Robust Bayesian T-Test"
+"Meta-Analysis (JASP)","https://github.com/jasp-stats/jaspMetaAnalysis/","Meta-Analysis Module for JASP"
+"Mixed Models (JASP)","https://github.com/jasp-stats/jaspSurvival/","Survival Module for JASP"
+"Survival (JASP)","https://github.com/jasp-stats/jaspMixedModels/","Mixed Models Module for JASP"
+"Learn Bayes (JASP)","https://github.com/jasp-stats/jaspLearnBayes","Learn Bayes Module for JASP"
