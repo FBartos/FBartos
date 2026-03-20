@@ -105,6 +105,34 @@ print_service <- function(service_df, font_size = "\\small") {
   cat("\\normalsize\n")  # Reset to normal size
 }
 
+# Function to print service entries (title only, no description)
+print_service_brief <- function(service_df, font_size = "\\small") {
+  cat(font_size, "\n")
+  cat("\\begin{itemize}\n")
+  cat("\\setlength{\\itemsep}{3pt}\n")
+  cat("\\setlength{\\parskip}{0pt}\n")
+  
+  for(i in 1:nrow(service_df)) {
+    year <- service_df$year[i]
+    title <- service_df$title[i]
+    
+    cat("\\item[", year, "] \\textbf{", title, "}\n", sep = "")
+  }
+  
+  cat("\\end{itemize}\n")
+  cat("\\normalsize\n")
+}
+
+# Function to print peer review journals as comma-separated block
+print_peer_review_inline <- function(journals_df, font_size = "\\small") {
+  journals <- journals_df$journal
+  cat(font_size, "\n")
+  cat("\\begin{cvparagraph}\n")
+  cat(paste(journals, collapse = ", "), "\n")
+  cat("\\end{cvparagraph}\n")
+  cat("\\normalsize\n")
+}
+
 # Function to print teaching entries with better page breaks
 print_teaching <- function(teaching_df, font_size = "\\small") {
   cat(font_size, "\n")
@@ -143,6 +171,44 @@ print_supervision <- function(supervision_df, font_size = "\\small") {
     
     # Format: [YEAR] Type: Title - Description; Campus
     cat("\\item[", year, "] \\textbf{", type, "}: ", title, " - ", description, "; ", campus, "\n", sep = "")
+  }
+  
+  cat("\\end{itemize}\n")
+  cat("\\normalsize\n")
+}
+
+# Function to print education entries (brief, no details)
+print_education_brief <- function(education_df, font_size = "\\small") {
+  cat(font_size, "\n")
+  cat("\\begin{itemize}\n")
+  cat("\\setlength{\\itemsep}{3pt}\n")
+  cat("\\setlength{\\parskip}{0pt}\n")
+  
+  for(i in 1:nrow(education_df)) {
+    dates <- education_df$dates[i]
+    degree <- education_df$degree[i]
+    uni <- education_df$uni[i]
+    
+    cat("\\item[", dates, "] \\textbf{", degree, "}: ", uni, "\n", sep = "")
+  }
+  
+  cat("\\end{itemize}\n")
+  cat("\\normalsize\n")
+}
+
+# Function to print experience entries (brief, no details)
+print_experience_brief <- function(experience_df, font_size = "\\small") {
+  cat(font_size, "\n")
+  cat("\\begin{itemize}\n")
+  cat("\\setlength{\\itemsep}{3pt}\n")
+  cat("\\setlength{\\parskip}{0pt}\n")
+  
+  for(i in 1:nrow(experience_df)) {
+    dates <- experience_df$dates[i]
+    role <- experience_df$role[i]
+    company <- experience_df$company[i]
+    
+    cat("\\item[", dates, "] \\textbf{", role, "}: ", company, "\n", sep = "")
   }
   
   cat("\\end{itemize}\n")

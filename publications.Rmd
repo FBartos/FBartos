@@ -1,0 +1,65 @@
+---
+name: 
+surname: František Bartoš
+date: "`r format(Sys.time(), '%B, %Y')`"
+position: "Postdoctoral Researcher, CFO of JASP Services"
+address: "Amsterdam, Netherlands"
+email: "f.bartos96@gmail.com"
+www: "frantisek-bartos.info/"
+github: "FBartos"
+linkedin: "franti%C5%A1ek-barto%C5%A1-50249b192/"
+headcolor: "414141"
+csl: apa.csl
+output: 
+  vitae::awesomecv:
+    keep_tex: true
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(vitae)
+source("_functions.R")
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+# Publications
+
+## Meta-Analysis & Publication Bias Methods
+
+```{r publications-meta, results='asis'}
+print_publications("publications-meta_analysis.bib")
+```
+
+## Statistical Methods & Theory
+
+```{r publications-statistics, results='asis'}
+print_publications("publications-statistics.bib")
+```
+
+## Empirical Research & Meta-Science
+
+```{r publications-empirical, results='asis'}
+print_publications("publications-empirical.bib")
+```
+
+## Other Publications
+
+```{r publications-other, results='asis'}
+print_publications("publications-all.bib")
+```
+
+## Other Preprints
+
+```{r publications-preprints, results='asis'}
+print_publications("publications-preprints.bib")
+```
+
+# Software
+
+\begin{cvparagraph}
+My research output includes the development of open-source R packages for statistical analysis. These packages enable scientific practitioners to apply the developed methodology in practice.
+\end{cvparagraph}
+
+```{r software, results='asis'}
+print_software(read_csv("software.csv", show_col_types = FALSE))
+```

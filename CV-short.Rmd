@@ -1,0 +1,93 @@
+---
+name: 
+surname: František Bartoš
+date: "`r format(Sys.time(), '%B, %Y')`"
+position: "Postdoctoral Researcher, CFO of JASP Services"
+address: "Amsterdam, Netherlands"
+email: "f.bartos96@gmail.com"
+www: "frantisek-bartos.info/"
+github: "FBartos"
+linkedin: "franti%C5%A1ek-barto%C5%A1-50249b192/"
+headcolor: "414141"
+csl: apa.csl
+output: 
+  vitae::awesomecv:
+    keep_tex: true
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(vitae)
+source("_functions.R")
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+# About
+
+\begin{cvparagraph}
+I am a postdoctoral researcher at the department of Psychological Methods at the University of Amsterdam and cofounder \& CFO of JASP Services. My goal is to improve statistical procedures and enable researchers to draw better inferences from data. I am interested in Bayesian statistics, meta-analyses, publication bias, and replicability. I also flipped some coins a couple of times.
+
+\href{https://orcid.org/0000-0002-0018-5573}{OrcID: 0000-0002-0018-5573}, \href{https://www.webofscience.com/wos/author/record/ABD-1217-2021}{ResearcherID: ABD-1217-2021}, \href{https://scholar.google.com/citations?user=vAo-APsAAAAJ\&hl=en}{Google Scholar: vAo-APsAAAAJ}
+\end{cvparagraph}
+
+# Education
+
+```{r education, results='asis'}
+print_education_brief(read_cv_csv("education.csv"))
+```
+
+# Employment
+
+```{r experience, results='asis'}
+print_experience_brief(read_cv_csv("experience_brief.csv"))
+```
+
+# Funding
+
+```{r funding, results='asis'}
+print_funding(read_cv_csv("funding.csv"))
+```
+
+# Supervision
+
+```{r supervision, results='asis'}
+print_supervision(read_cv_csv("supervision.csv"))
+```
+
+# Teaching
+
+```{r teaching, results='asis'}
+print_teaching(read_cv_csv("teaching.csv"))
+```
+
+# Peer Review
+
+```{r peer-review, results='asis'}
+print_peer_review_inline(read_csv("peer_review.csv", show_col_types = FALSE))
+```
+
+# Scientific Societies
+
+```{r societies, results='asis'}
+print_peer_review_inline(read_csv("societies.csv", show_col_types = FALSE))
+```
+
+# Organization
+
+```{r service-entries, results='asis'}
+print_service_brief(read_cv_csv("service.csv"))
+```
+
+# Awards
+
+```{r awards, results='asis'}
+print_awards(read_cv_csv("awards.csv"))
+```
+
+# Scholarships
+
+```{r scholarships, results='asis'}
+print_scholarships(read_cv_csv("scholarships.csv"))
+```
+
+
