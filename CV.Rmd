@@ -36,7 +36,7 @@ read_cv_csv("education.csv") %>%
   detailed_entries(degree, dates, uni, loc, details)
 ```
 
-# Experience
+# Employment & Experience
 
 ```{r experience}
 read_cv_csv("experience.csv") %>%
