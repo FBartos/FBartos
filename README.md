@@ -1,6 +1,6 @@
 # Hi there!
 
-I'm František, a PhD candidate in Psychology at the University of Amsterdam and co-founder of JASP Services. I'm passionate about making statistical methods more accessible and helping researchers draw better conclusions from their data.
+I'm František, a postdoctoral researcher at the University of Amsterdam and co-founder of JASP Services. I'm passionate about making statistical methods more accessible and helping researchers draw better conclusions from their data.
 
 ## What I work on
 
