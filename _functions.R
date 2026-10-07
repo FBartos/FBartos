@@ -1,5 +1,10 @@
 # Helper functions for CV generation
 
+# Preserve Unicode when cat() generates LaTeX under a non-UTF-8 Windows locale.
+if (.Platform$OS.type == "windows" && !l10n_info()[["UTF-8"]]) {
+  invisible(Sys.setlocale("LC_CTYPE", ".UTF-8"))
+}
+
 # Read a CSV and reverse row order (CSV is chronological, print is reverse-chronological)
 read_cv_csv <- function(file, ...) {
   df <- readr::read_csv(file, show_col_types = FALSE, ...)
