@@ -12,6 +12,7 @@ year,title,conference,place
 2023,Robust Bayesian meta-regression: Publication bias adjusted moderator analysis,MathPsych/ICCM/EMPG,Amsterdam
 2023,Bayesian location-scale model for assessing reliability differences with ordinal ratings,International Meeting of Psychometric Society,Baltimore
 2023,Exploring open science practices in behavioural public policy research,MAER-NET,Palma de Mallorca
+2023,Empirical prior distributions for Bayesian meta-analyses of binary and time to event outcomes,Bayesian Biostatistics,Utrecht
 2024,"Bayesian model-averaged analysis of 350,757 coin flips",Joint Statistical Meeting,Portland
 2024,Meta-analysis with JASP,Society for Research Synthesis Methodology,Amsterdam
 2025,Fast and efficient robust Bayesian meta-analysis with spike-and-slab priors,Society for Research Synthesis Methodology,Madison
@@ -22,3 +23,4 @@ year,title,conference,place
 2026,Living Synthetic Benchmarks: A Neutral and Cumulative Framework for Simulation Studies,Interdisciplinary Symposium on Meta Science for Methods Research,Zurich
 2026,Effect of Artificial Intelligence on Learning: A Meta-Meta-Analysis,Congress of the Deutsche Gesellschaft fur Psychologie,Luxembourg (remote)
 2026,Living Synthetic Benchmarks: A Neutral and Cumulative Framework for Simulation Studies,MAER-NET,Chemnitz
+2026,Flexible Bayesian Meta-Analysis with RoBMA R Package and JASP,Bayesian Biostatistics,Leiden

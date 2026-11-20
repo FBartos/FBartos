@@ -1,6 +1,6 @@
 ---
 name: 
-surname: František Bartoš
+surname: František Bartoš, PhD
 date: "`r format(Sys.time(), '%B, %Y')`"
 position: "Postdoctoral Researcher, CFO of JASP Services"
 address: "Amsterdam, Netherlands"

@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.10.1)  4 NOV 2026 11:38
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.10.1)  20 NOV 2026 11:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**CV.tex
-(./CV.tex
+**C:/Users/fbartos/AppData/Local/Temp/fbartos-cv-pdfs-1a229660fed24c4bb3fb78cb9876bffb/CV.tex
+(c:/Users/fbartos/AppData/Local/Temp/fbartos-cv-pdfs-1a229660fed24c4bb3fb78cb9876bffb/CV.tex
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-09-09>
 (./awesome-cv.cls
@@ -936,12 +936,12 @@ Package rerunfilecheck Info: File `CV.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 33345 strings out of 469676
- 688870 string characters out of 5463097
- 1270077 words of memory out of 5000000
+ 33347 strings out of 469676
+ 689208 string characters out of 5463097
+ 1270082 words of memory out of 5000000
  61863 multiletter control sequences out of 15000+600000
  632885 words of font info for 135 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 131i,11n,136p,540b,652s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 131i,11n,136p,625b,652s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on CV.pdf (9 pages).

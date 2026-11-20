@@ -1,6 +1,6 @@
 ---
 name: 
-surname: František Bartoš
+surname: František Bartoš, PhD
 date: "`r format(Sys.time(), '%B, %Y')`"
 position: "Postdoctoral Researcher, CFO of JASP Services"
 address: "Amsterdam, Netherlands"
@@ -33,7 +33,7 @@ I am a postdoctoral researcher at the department of Psychological Methods at the
 ```{r education}
 read_cv_csv("education.csv") %>%
   mutate(details = strsplit(details, "\\|")) %>%
-  detailed_entries(degree, dates, uni, loc, details)
+  detailed_entries(degree, dates, uni, loc, details, .protect = FALSE)
 ```
 
 # Employment & Experience
